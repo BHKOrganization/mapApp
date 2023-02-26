@@ -21,16 +21,15 @@ export default function Map(){
         center: [lng, lat],
         zoom: zoom
       });
+      map.current.addControl(new maplibregl.NavigationControl(),"top-left");
       map.current.on("click", (event) => {
         const { lngLat } = event;
         const longitude = lngLat.lng;
         const latitude = lngLat.lat;
-        
         // Önceki markörü kaldır
         if (marker.current) {
           marker.current.remove();
         }
-
         // Markörü oluştur
         marker.current = new maplibregl.Marker({color: "#FF0000"})
           .setLngLat([longitude, latitude])
@@ -38,7 +37,6 @@ export default function Map(){
       });
     }
   }, [lng, lat, zoom, API_KEY]);
-
   return (
     <div className="map-wrap">
       <div ref={mapContainer} className="map" />
