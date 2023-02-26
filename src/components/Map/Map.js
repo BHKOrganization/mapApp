@@ -3,16 +3,15 @@ import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import './map.css';
 
+
 export default function Map(){
   const mapContainer = useRef(null);
   const map = useRef(null);
   const marker = useRef(null);
-  const [lng] = useState(139.753);
-  const [lat] = useState(35.6844);
-  const [zoom] = useState(8);
+  const [lng] = useState(0);
+  const [lat] = useState(0);
+  const [zoom] = useState(3);
   const [API_KEY] = useState('hxQmOftRJEvzSCiQqfOZ');
-
-
   useEffect(() => {
     if (!map.current) {
       map.current = new maplibregl.Map({
