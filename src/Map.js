@@ -8,19 +8,33 @@ export default function Map(){
   const map = useRef(null);
   const [lng] = useState(139.753);
   const [lat] = useState(35.6844);
-  const [zoom] = useState(14);
+  const [zoom] = useState(8);
   const [API_KEY] = useState('hxQmOftRJEvzSCiQqfOZ');
 
-  useEffect(() => {
-    if (map.current) return;
-    map.current = new maplibregl.Map({
-      container: mapContainer.current,
-      style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${API_KEY}`,
-      center: [lng, lat],
-      zoom: zoom
-    });
 
-  });
+  useEffect(() => {
+    if (!map.current) {
+      map.current = new maplibregl.Map({
+        container: mapContainer.current,
+        style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${API_KEY}`,
+        center: [lng, lat],
+        zoom: zoom
+      });
+      map.current.on("click", (event) => {
+        const { lngLat } = event;
+        const longitude = lngLat.lng;
+        const latitude = lngLat.lat;
+        
+        // Markörü oluştur
+        new maplibregl.Marker({color: "#FF0000"})
+        .setLngLat([longitude, latitude])
+        .addTo(map.current);
+        
+       
+       
+      });
+    }
+  }, [lng, lat, zoom, API_KEY]);
 
   return (
     <div className="map-wrap">
