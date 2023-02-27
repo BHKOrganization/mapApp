@@ -11,9 +11,10 @@ export default function Map(props) {
   const [lat] = useState(0);
   const [zoom] = useState(3);
   const [API_KEY] = useState("hxQmOftRJEvzSCiQqfOZ");
+  const [location2, setLocation2] = useState({ lati: 0, longi: 0 });
 
-  const handleLocation = (latitude, longitude) => {
-    props.setLocation({ lati: latitude, longi: longitude });
+  const handleLocation = () => {
+    props.setLocation({ lati: location2.lati, longi: location2.longi });
   };
 
   useEffect(() => {
@@ -34,7 +35,7 @@ export default function Map(props) {
         if (marker.current) {
           marker.current.remove();
         }
-        handleLocation(latitude, longitude);
+        setLocation2({ lati: latitude, longi: longitude });
         // Markörü oluştur
         marker.current = new maplibregl.Marker({ color: "#FF0000" })
           .setLngLat([longitude, latitude])
@@ -46,13 +47,15 @@ export default function Map(props) {
   return (
     <div>
       <div className="map-wrap">
-        <div ref={mapContainer} className="map" />
+        <div ref={mapContainer} className="map" onClick={handleLocation} />
       </div>
       <div className="submitParent">
-        <SubmitButton location={props.location} title="Submit" className="submitBtn"/>
+        <SubmitButton
+          location={props.location}
+          title="Submit"
+          className="submitBtn"
+        />
       </div>
-        
     </div>
-    
   );
 }
