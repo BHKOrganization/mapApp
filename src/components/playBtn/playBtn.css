@@ -2,6 +2,7 @@ button {
     background-color: #EB0A0A;
     border: solid 4px black;
     border-radius: 2rem;
+    text-shadow: 1px 4px 4px black;
     color: white;
     padding: 16px 32px;
     text-align: center;
@@ -11,4 +12,7 @@ button {
     margin: 4px 2px;
     cursor: pointer;
   }
-  
+button:hover{
+    box-shadow: 0 0 16px 2px #EB0A0A;
+
+}
