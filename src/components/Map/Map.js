@@ -11,6 +11,11 @@ export default function Map(props) {
   const [lat] = useState(0);
   const [zoom] = useState(3);
   const [API_KEY] = useState("hxQmOftRJEvzSCiQqfOZ");
+
+  const handleLocation = (latitude, longitude) => {
+    props.setLocation({ lati: latitude, longi: longitude });
+  };
+
   useEffect(() => {
     if (!map.current) {
       map.current = new maplibregl.Map({
@@ -24,11 +29,12 @@ export default function Map(props) {
         const { lngLat } = event;
         const longitude = lngLat.lng;
         const latitude = lngLat.lat;
+
         // Önceki markörü kaldır
         if (marker.current) {
           marker.current.remove();
         }
-        props.setLocation({ lati: latitude, longi: longitude });
+        handleLocation(latitude, longitude);
         // Markörü oluştur
         marker.current = new maplibregl.Marker({ color: "#FF0000" })
           .setLngLat([longitude, latitude])
@@ -36,6 +42,7 @@ export default function Map(props) {
       });
     }
   }, [lng, lat, zoom, API_KEY]);
+
   return (
     <div className="map-wrap">
       <div ref={mapContainer} className="map" />
