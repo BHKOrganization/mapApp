@@ -3,6 +3,12 @@
     width: 100%;
     height: calc(100vh - 77px); /* calculate height of the screen minus the heading */
   }
+  .submitParent{
+    position:fixed;
+    top: 75%;
+    left: 45%;
+
+  }
   
   .map {
     position: absolute;
