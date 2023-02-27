@@ -1,0 +1,20 @@
+.backgroundMain {
+    height: 100vh;
+    background-image: url('../image/background.png');
+    background-size: cover; /* Resim boyutu elementle aynı olsun */
+    background-position: center; /* Resim ortalanmış olsun */
+}
+.logoParent {
+    display: flex;
+    height: 7rem;
+    justify-content: center;
+    position: relative;
+    top: 20%;
+}
+.playBtn {
+  display: flex;
+  justify-content: center;
+  position :relative;
+  top: 55%;
+ 
+}
