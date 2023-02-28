@@ -22,7 +22,7 @@
 }
 
 .formInput {
-  width: 250px;
+  width: 300px;
   padding: 8px 0 8px 5px;
   border-radius: 11px;
   border: none;
@@ -30,7 +30,23 @@
 }
 
 .questionInput {
-  max-width: 250px;
-  min-width: 250px;
+  max-width: 300px;
+  min-width: 300px;
   max-height: 300px;
+}
+
+.formSubmitBtn {
+  background-color: #b4e5a6;
+  color: rgb(29, 29, 29);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px auto 0 auto;
+  font-size: 16px;
+}
+
+.formSubmitBtn:hover {
+  background-color: #8fb983;
+  transition: 0.2s;
 }

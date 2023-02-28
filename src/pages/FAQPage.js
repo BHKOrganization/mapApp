@@ -27,7 +27,7 @@ const FAQuestions = [
   },
 ];
 
-export const FAQPage = () => {
+const FAQPage = () => {
   const [selectedFaq, setSelectedFaq] = useState(null);
   return (
     <div className="faq-page">
@@ -54,3 +54,5 @@ export const FAQPage = () => {
     </div>
   );
 };
+
+export default FAQPage;

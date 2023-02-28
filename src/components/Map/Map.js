@@ -17,6 +17,19 @@ export default function Map(props) {
     props.setLocation({ lati: location2.lati, longi: location2.longi });
   };
 
+  const styles = {
+    map_wrap: {
+      position: "relative",
+      width: props.width,
+      height: props.length,
+    },
+    map_own: {
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+    },
+  };
+
   useEffect(() => {
     if (!map.current) {
       map.current = new maplibregl.Map({
@@ -46,10 +59,14 @@ export default function Map(props) {
 
   return (
     <div>
-      <div className="map-wrap">
-        <div ref={mapContainer} className="map" onClick={handleLocation} />
+      <div className="map-wrap" style={styles.map_wrap}>
+        <div
+          ref={mapContainer}
+          className="map"
+          onClick={handleLocation}
+          style={styles.map_own}
+        />
       </div>
-
     </div>
   );
 }
