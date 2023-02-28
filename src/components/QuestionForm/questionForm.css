@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Kadwa&display=swap");
+
+.questionFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 20px;
+
+  box-shadow: 0px 6px 5px 2px rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+  max-width: 500px;
+}
+
+.formLabel {
+  display: block;
+  margin: 20px 0 0 0;
+  text-align: center;
+  font-size: 20pt;
+  font-family: "Kadwa", serif;
+}
+
+.formInput {
+  width: 250px;
+  padding: 8px 0 8px 5px;
+  border-radius: 11px;
+  border: none;
+  background-color: #b4e5a6;
+}
+
+.questionInput {
+  max-width: 250px;
+  min-width: 250px;
+  max-height: 300px;
+}
