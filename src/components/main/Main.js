@@ -1,5 +1,5 @@
 import './main.css';
-import { PlayBtn } from '../playBtn/PlayBtn';
+import { PlayBtn } from '../PlayBtn/PlayBtn';
 import Logo from '../image/logo.png'
 export default function Main(){
 
