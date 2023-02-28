@@ -1,4 +1,4 @@
-button {
+.playButton {
     background-color: #EB0A0A;
     border: solid 4px black;
     border-radius: 2rem;
@@ -12,7 +12,7 @@ button {
     margin: 4px 2px;
     cursor: pointer;
   }
-button:hover{
+.playButton:hover{
     box-shadow: 0 0 16px 2px #EB0A0A;
 
 }
