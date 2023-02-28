@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./map.css";
-import SubmitButton from "../SubmitButton/SubmitButton";
+
 export default function Map(props) {
   const mapContainer = useRef(null);
   const map = useRef(null);
@@ -49,13 +49,7 @@ export default function Map(props) {
       <div className="map-wrap">
         <div ref={mapContainer} className="map" onClick={handleLocation} />
       </div>
-      <div className="submitParent">
-        <SubmitButton
-          location={props.location}
-          title="Submit"
-          className="submitBtn"
-        />
-      </div>
+
     </div>
   );
 }
