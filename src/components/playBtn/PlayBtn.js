@@ -1,10 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./playBtn.css";
 
 const PlayBtn = () => {
   return (
     <div className="playButton">
-      <button>PLAY</button>
+      <Link to={"/game-map"} className="playLink">
+        PLAY
+      </Link>
     </div>
   );
 };

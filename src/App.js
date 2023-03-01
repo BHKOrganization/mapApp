@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage";
 import AddQuestionPage from "./pages/AddQuestionPage";
 import FAQPage from "./pages/FAQPage";
 import { Route } from "react-router-dom";
-
+import GamePage from "./pages/GamePage";
 function App() {
   return (
     <>
@@ -13,6 +13,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="addquestion" element={<AddQuestionPage />} />
           <Route path="faq" element={<FAQPage />} />
+          <Route path="game-map" element={<GamePage />} />
         </Routes>
       </BrowserRouter>
     </>

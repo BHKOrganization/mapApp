@@ -16,3 +16,7 @@
     box-shadow: 0 0 16px 2px #EB0A0A;
 
 }
+.playLink{
+  text-decoration: none;
+  color: white;
+}
