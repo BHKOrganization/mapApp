@@ -1,0 +1,41 @@
+.home {
+  display: flex;
+  margin-top: 1rem;
+}
+.home a {
+  text-decoration: none;
+}
+
+.navbar-container {
+  font-family: Verdana, sans-serif;
+  height: 6vh;
+  background-color: rgb(107, 152, 192);
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  flex: 1;
+  opacity: 60%;
+}
+
+.menu-container {
+  outline: none;
+  align-items: center;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.menu-container a:not(:first-child) {
+  margin-left: 30px;
+}
+
+.menu-container a {
+  text-decoration: none;
+  display: flex;
+  justify-items: right;
+  justify-content: center;
+  align-items: center;
+  padding: 5 25px;
+  float: right;
+}
