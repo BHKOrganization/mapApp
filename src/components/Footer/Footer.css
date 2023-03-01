@@ -1,0 +1,28 @@
+.footer-container {
+  outline: none;
+  font-family: Verdana, sans-serif;
+  height: 11vh;
+  background-color: rgb(107, 152, 192);
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  flex: 1;
+  opacity: 60%;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  outline: none;
+  justify-content: space-between;
+  display: block;
+}
+
+.donate {
+  justify-content: space-between;
+  display: block;
+}
+
+.donate a {
+  text-decoration: none;
+}
