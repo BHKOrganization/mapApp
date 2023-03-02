@@ -30,61 +30,63 @@ const QuestionForm = () => {
 
   return (
     <>
-      <div className="questionFormContainer">
-        <div className="questionTop"></div>
-        <div className="questionParent">
-          <form className="questionForm" onSubmit={handleSubmit}>
-            <label className="formLabel" for="nickname">
-              Nickname
-            </label>
-            <input
-              className="formInput"
-              type="text"
-              name="nickname"
-              value={nickname}
-              onChange={(e) => {
-                setNickname(e.target.value);
-              }}
-              required
-            />
-            <label className="formLabel" for="language">
-              Language
-            </label>
-            <select
-              className="formInput"
-              name="language"
-              value={language}
-              onChange={(e) => {
-                setLanguage(e.target.value);
-              }}
-            >
-              <option value="english">English</option>
-              <option value="turkish">Türkçe</option>
-            </select>
-            <label className="formLabel" for="question">
-              Question
-            </label>
-            <textarea
-              className="formInput questionInput"
-              type="text"
-              value={question}
-              name="question"
-              onChange={(e) => {
-                setQuestion(e.target.value);
-              }}
-            />
-            <label className="formLabel" for="map">
-              Map
-            </label>
-            <Map
-              location={location}
-              setLocation={setLocation}
-              width="300px"
-              length="300px"
-              name="map"
-            />
-            <input type="submit" className="formSubmitBtn" value="Submit" />
-          </form>
+      <div className="question-container">
+        <div className="questionFormContainer">
+          <div className="questionTop"></div>
+          <div className="questionParent">
+            <form className="questionForm" onSubmit={handleSubmit}>
+              <label className="formLabel" for="nickname">
+                Nickname
+              </label>
+              <input
+                className="formInput"
+                type="text"
+                name="nickname"
+                value={nickname}
+                onChange={(e) => {
+                  setNickname(e.target.value);
+                }}
+                required
+              />
+              <label className="formLabel" for="language">
+                Language
+              </label>
+              <select
+                className="formInput"
+                name="language"
+                value={language}
+                onChange={(e) => {
+                  setLanguage(e.target.value);
+                }}
+              >
+                <option value="english">English</option>
+                <option value="turkish">Türkçe</option>
+              </select>
+              <label className="formLabel" for="question">
+                Question
+              </label>
+              <textarea
+                className="formInput questionInput"
+                type="text"
+                value={question}
+                name="question"
+                onChange={(e) => {
+                  setQuestion(e.target.value);
+                }}
+              />
+              <label className="formLabel" for="map">
+                Map
+              </label>
+              <Map
+                location={location}
+                setLocation={setLocation}
+                width="300px"
+                length="300px"
+                name="map"
+              />
+              <input type="submit" className="formSubmitBtn" value="Submit" />
+            </form>
+          </div>
         </div>
       </div>
     </>
