@@ -19,6 +19,7 @@ export default function Map(props) {
 
   const styles = {
     map_wrap: {
+      marginTop: "25px",
       position: "relative",
       width: props.width,
       height: props.length,

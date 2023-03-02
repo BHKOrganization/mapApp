@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Faq.css";
 
-const FAQuestions = [
+const faqQuestions = [
   {
     id: 1,
     question: "Can I play with friends?",
@@ -28,32 +28,17 @@ const FAQuestions = [
   },
 ];
 
-const Faq = () => {
-  const [selectedFaq, setSelectedFaq] = useState(null);
+function FAQ() {
   return (
-    <div className="faq-page">
-      <div className="faq-container">
-        {FAQuestions.map((faq) => (
-          <div
-            key={faq.id}
-            className={`faq-item ${selectedFaq === faq.id ? "expanded" : ""}`}
-          >
-            <button
-              className="faq-question"
-              onClick={() =>
-                setSelectedFaq(selectedFaq === faq.id ? null : faq.id)
-              }
-            >
-              {faq.question}
-            </button>
-            {selectedFaq === faq.id && (
-              <div className="faq-answer">{faq.answer}</div>
-            )}
-          </div>
-        ))}
-      </div>
+    <div className="faq-container">
+      {faqQuestions.map((question) => (
+        <div key={question.id} className="faq-card">
+          <h3 className="faq-question">{question.question}</h3>
+          <p className="faq-answer">{question.answer}</p>
+        </div>
+      ))}
     </div>
   );
-};
+}
 
-export default Faq;
+export default FAQ;
