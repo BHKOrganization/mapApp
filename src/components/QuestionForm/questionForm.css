@@ -1,17 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kadwa&display=swap");
-.questionTop{
-  display: flex;
-  margin-bottom: 60px;
-}
-.questionParent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0px auto;
-  padding: 40px;
-  margin-bottom: 50px;
-  box-shadow: 0px 6px 5px 2px rgba(0, 0, 0, 0.25);
+
+.question-container {
   background: rgb(229, 217, 182);
   background: linear-gradient(
     345deg,
@@ -19,6 +8,21 @@
     rgba(164, 190, 123, 1) 50%,
     rgba(95, 141, 78, 1) 100%
   );
+}
+
+.questionTop {
+  display: flex;
+  margin-bottom: 60px;
+}
+.questionParent {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+  padding: 40px;
+  box-shadow: 0px 6px 5px 2px rgba(0, 0, 0, 0.25);
   max-width: 500px;
 }
 
@@ -40,6 +44,7 @@
 
 .questionInput {
   max-width: 300px;
+  min-height: 100px;
   min-width: 300px;
   max-height: 300px;
 }
