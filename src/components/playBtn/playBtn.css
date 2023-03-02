@@ -1,22 +1,21 @@
 .playButton {
-    background-color: #EB0A0A;
-    border: solid 4px black;
-    border-radius: 2rem;
-    text-shadow: 1px 4px 4px black;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 3rem;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-.playButton:hover{
-    box-shadow: 0 0 16px 2px #EB0A0A;
-
+  background-color: #eb0a0a;
+  border: solid 4px black;
+  border-radius: 2rem;
+  text-shadow: 1px 4px 4px black;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 3rem;
+  margin: 4px 2px;
+  cursor: pointer;
 }
-.playLink{
+.playButton:hover {
+  box-shadow: 0 0 16px 2px #eb0a0a;
+}
+.playLink {
   text-decoration: none;
   color: white;
 }

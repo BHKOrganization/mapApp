@@ -1,8 +1,9 @@
 .footer-container {
+  color: white;
   outline: none;
   font-family: Verdana, sans-serif;
   height: 11vh;
-  background-color: rgb(107, 152, 192);
+  background-color: #285430;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
