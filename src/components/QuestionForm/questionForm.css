@@ -8,12 +8,12 @@
     rgba(164, 190, 123, 1) 50%,
     rgba(95, 141, 78, 1) 100%
   );
-  padding-bottom: 20px;
+  padding-bottom: 3vh;
 }
 
 .questionTop {
   display: flex;
-  margin-bottom: 60px;
+  margin-bottom: 8vh;
 }
 .questionParent {
   background-color: white;
@@ -26,6 +26,7 @@
   box-shadow: 0px 6px 5px 2px rgba(0, 0, 0, 0.25);
   max-width: 500px;
   padding-bottom: 20px;
+  border-radius: 2vh;
 }
 
 .formLabel {

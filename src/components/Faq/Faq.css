@@ -15,7 +15,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  padding: 70px;
+  padding-top: 10vh;
 }
 
 .faqCard {
