@@ -2,17 +2,15 @@
   height: 100vh;
   background: rgb(229, 217, 182);
   background: linear-gradient(
-    345deg,
+    160deg,
     rgba(229, 217, 182, 1) 0%,
     rgba(164, 190, 123, 1) 50%,
     rgba(95, 141, 78, 1) 100%
   );
-  background-size: cover; /* Resim boyutu elementle aynı olsun */
-  background-position: center; /* Resim ortalanmış olsun */
 }
 .logoParent {
   display: flex;
-  height: 7rem;
+  height: 10rem;
   justify-content: center;
   position: relative;
   top: 20%;

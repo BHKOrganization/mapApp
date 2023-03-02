@@ -1,4 +1,16 @@
-.faq-container {
+.faqContainer {
+  height: 100vh;
+  background: rgb(229, 217, 182);
+  background: linear-gradient(
+    345deg,
+    rgba(229, 217, 182, 1) 0%,
+    rgba(164, 190, 123, 1) 50%,
+    rgba(95, 141, 78, 1) 100%
+  );
+  background-size: cover; /* Resim boyutu elementle aynı olsun */
+  background-position: center; /* Resim ortalanmış olsun */
+}
+.faqContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -6,9 +18,9 @@
   padding: 70px;
 }
 
-.faq-card {
+.faqCard {
   width: 1000px;
-  height: 200px;
+  max-height: 200px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
@@ -20,18 +32,19 @@
   align-items: flex-start;
 }
 
-.faq-question {
+.faqQuestion {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 10px;
+  border-bottom: solid gray 1px;
 }
 
-.faq-answer {
+.faqAnswer {
   font-size: 1.1rem;
 }
 
 @media only screen and (max-width: 768px) {
-  .faq-card {
+  .faqCard {
     width: 100%;
   }
 }

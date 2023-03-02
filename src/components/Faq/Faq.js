@@ -30,11 +30,11 @@ const faqQuestions = [
 
 function FAQ() {
   return (
-    <div className="faq-container">
+    <div className="faqContainer">
       {faqQuestions.map((question) => (
-        <div key={question.id} className="faq-card">
-          <h3 className="faq-question">{question.question}</h3>
-          <p className="faq-answer">{question.answer}</p>
+        <div key={question.id} className="faqCard">
+          <h3 className="faqQuestion">{question.question}</h3>
+          <p className="faqAnswer">{question.answer}</p>
         </div>
       ))}
     </div>
